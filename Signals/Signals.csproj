@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A8DA35B-F3DE-4A1B-A567-2508FB70414A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Signals</RootNamespace>
+    <AssemblyName>Signals</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Board1730,_BoardVirtual</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Automation.BDaq, Version=1.0.1.0, Culture=neutral, PublicKeyToken=463f5928d60183a0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Automation.BDaq\1.0.1.0__463f5928d60183a0\Automation.BDaq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boards\Board.cs" />
+    <Compile Include="Boards\Board1784SQL.cs" />
+    <Compile Include="Boards\Board1784virtual.cs" />
+    <Compile Include="CatchSignals.cs" />
+    <Compile Include="JAlarmList.cs" />
+    <Compile Include="SaveInput.cs" />
+    <Compile Include="SignalListMan.cs" />
+    <Compile Include="SignalListWork.cs" />
+    <Compile Include="TransportEvent.cs" />
+    <Compile Include="UCSignal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSignal.designer.cs">
+      <DependentUpon>UCSignal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSignalIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSignalIn.designer.cs">
+      <DependentUpon>UCSignalIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSignalOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSignalOut.designer.cs">
+      <DependentUpon>UCSignalOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSignals.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSignals.designer.cs">
+      <DependentUpon>UCSignals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boards\Board1730.cs" />
+    <Compile Include="Boards\BoardSQL.cs" />
+    <Compile Include="Boards\BoardVirtual.cs" />
+    <None Include="Boards\DASP52032Connector.cs" />
+    <None Include="Boards\DASP52032_real.cs" />
+    <Compile Include="FView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FView.Designer.cs">
+      <DependentUpon>FView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signal.cs" />
+    <Compile Include="SignalList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FView.resx">
+      <DependentUpon>FView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSignal.resx">
+      <DependentUpon>UCSignal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSignalIn.resx">
+      <DependentUpon>UCSignalIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSignalOut.resx">
+      <DependentUpon>UCSignalOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSignals.resx">
+      <DependentUpon>UCSignals.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PARLIB\PARLIB.csproj">
+      <Project>{E343BAF4-1DB4-486D-804D-D6C317D63CC5}</Project>
+      <Name>PARLIB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Share\Share.csproj">
+      <Project>{0F2FFD99-9E56-4CCD-A66F-CD173B329481}</Project>
+      <Name>Share</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQL\SQL.csproj">
+      <Project>{B7767642-6348-4077-936C-E2EB4604D7AF}</Project>
+      <Name>SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPAR_common\UPAR_common.csproj">
+      <Project>{7904368C-7A89-4044-B685-50A33F4CE606}</Project>
+      <Name>UPAR_common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

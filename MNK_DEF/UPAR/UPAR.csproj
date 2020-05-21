@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B26ABE6B-83F8-4BFD-AE40-F053FD2096F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UPAR</RootNamespace>
+    <AssemblyName>UPAR</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cIW.cs" />
+    <Compile Include="Def\CadrL502.cs" />
+    <Compile Include="Def\DefCL.cs" />
+    <Compile Include="Def\GSPFPars.cs" />
+    <Compile Include="Def\LinePars.cs" />
+    <Compile Include="AppPars.cs" />
+    <Compile Include="CColors.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Def\CrossPars.cs" />
+    <Compile Include="Def\DefectPars.cs" />
+    <Compile Include="DefectWork.cs" />
+    <Compile Include="Def\DefLineCh.cs" />
+    <Compile Include="Def\DefSomePars.cs" />
+    <Compile Include="Def\ThickPars.cs" />
+    <Compile Include="DimensionsPars.cs" />
+    <Compile Include="Def\FFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def\FFilter.designer.cs">
+      <DependentUpon>FFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\FilterPars.cs" />
+    <Compile Include="FLoginClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLoginClient.Designer.cs">
+      <DependentUpon>FLoginClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FParAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FParAll.Designer.cs">
+      <DependentUpon>FParAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L502Ch.cs" />
+    <Compile Include="LCard502Pars.cs" />
+    <Compile Include="SG\ColumnPars.cs" />
+    <Compile Include="SG\GridPars.cs" />
+    <Compile Include="SG\L_ColumnPars.cs" />
+    <Compile Include="SG\L_GridPars.cs" />
+    <Compile Include="SG\L_SOP.cs" />
+    <Compile Include="SG\SGPars.cs" />
+    <Compile Include="SG\SGSomePars.cs" />
+    <Compile Include="SG\SOPPars.cs" />
+    <Compile Include="SolenoidVPars.cs" />
+    <Compile Include="L_Client.cs" />
+    <Compile Include="L_L502Ch.cs" />
+    <Compile Include="TS\L_TypeSize.cs" />
+    <Compile Include="ParAll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignalsViewPars.cs" />
+    <Compile Include="SignalViewPars.cs" />
+    <Compile Include="SolenoidPars.cs" />
+    <Compile Include="SolenoidTemperaturePars.cs" />
+    <Compile Include="SolenoidVoltagePars.cs" />
+    <Compile Include="SG\SolidGroupPars.cs" />
+    <Compile Include="SomePars.cs" />
+    <Compile Include="Def\SOPPars.cs" />
+    <Compile Include="Def\TailPars.cs" />
+    <Compile Include="TS\TSDef\TSCross.cs" />
+    <Compile Include="TS\TSDef\TSDefSG.cs" />
+    <Compile Include="TS\TSDef\TSLine.cs" />
+    <Compile Include="TS\TSDef\TSSGSensors.cs" />
+    <Compile Include="TTLPars.cs" />
+    <Compile Include="TTLPointPars.cs" />
+    <Compile Include="TS\TypeSize.cs" />
+    <Compile Include="TS\TSDef\TypeSizeDef.cs" />
+    <Compile Include="Def\ViewZonePars.cs" />
+    <Compile Include="WorkPars.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Def\FFilter.resx">
+      <DependentUpon>FFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLoginClient.resx">
+      <DependentUpon>FLoginClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FParAll.resx">
+      <DependentUpon>FParAll.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PARLIB\PARLIB.csproj">
+      <Project>{E343BAF4-1DB4-486D-804D-D6C317D63CC5}</Project>
+      <Name>PARLIB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Protocol\Protocol.csproj">
+      <Project>{F7C68246-EAEA-4E9D-ABA0-5F09DAEA0084}</Project>
+      <Name>Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Share\Share.csproj">
+      <Project>{0F2FFD99-9E56-4CCD-A66F-CD173B329481}</Project>
+      <Name>Share</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UPAR_common\UPAR_common.csproj">
+      <Project>{7904368C-7A89-4044-B685-50A33F4CE606}</Project>
+      <Name>UPAR_common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

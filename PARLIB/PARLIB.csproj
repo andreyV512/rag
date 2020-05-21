@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E343BAF4-1DB4-486D-804D-D6C317D63CC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PARLIB</RootNamespace>
+    <AssemblyName>PARLIB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PARS_FILE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\System.Data.SQLite\2010\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Access.cs" />
+    <Compile Include="BooleanconverterRUS.cs" />
+    <Compile Include="ColorTr.cs" />
+    <Compile Include="Cry.cs" />
+    <Compile Include="Description.cs" />
+    <Compile Include="DictionaryConverter.cs" />
+    <Compile Include="EnumTypeConverter.cs" />
+    <Compile Include="FDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDescription.Designer.cs">
+      <DependentUpon>FDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLBase.Designer.cs">
+      <DependentUpon>FLBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FN.cs" />
+    <Compile Include="FParMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FParMain.Designer.cs">
+      <DependentUpon>FParMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LBLine.cs" />
+    <Compile Include="L_User.cs" />
+    <Compile Include="L_WindowLPars.cs" />
+    <Compile Include="MetaDesc.cs" />
+    <Compile Include="MetaPar.cs" />
+    <Compile Include="MetaTree.cs" />
+    <Compile Include="MetaTreeFile.cs" />
+    <Compile Include="MetaTreeSQL.cs" />
+    <Compile Include="OI.cs" />
+    <Compile Include="Param.cs" />
+    <Compile Include="ParBase.cs" />
+    <Compile Include="ParMain.cs" />
+    <Compile Include="ParMainLite.cs" />
+    <Compile Include="PDView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PDView.Designer.cs">
+      <DependentUpon>PDView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolPar.cs" />
+    <Compile Include="RExpandableObjectConverter.cs" />
+    <Compile Include="RProperty.cs" />
+    <Compile Include="SerialTree.cs" />
+    <Compile Include="SerialTreeFile.cs" />
+    <Compile Include="SerialTreeSQL.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="WindowLPars.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDescription.resx">
+      <DependentUpon>FDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLBase.resx">
+      <DependentUpon>FLBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FParMain.resx">
+      <DependentUpon>FParMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDView.resx">
+      <DependentUpon>PDView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Protocol\Protocol.csproj">
+      <Project>{F7C68246-EAEA-4E9D-ABA0-5F09DAEA0084}</Project>
+      <Name>Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQL\SQL.csproj">
+      <Project>{B7767642-6348-4077-936C-E2EB4604D7AF}</Project>
+      <Name>SQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5C3CC8D-06A3-44FB-907A-324F9D800A4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Defect</RootNamespace>
+    <AssemblyName>Defect</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_LCARD_VIRTUAL, ACS_VIRTUAL, _CALC_LOCAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>L4.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="lpcieNet, Version=1.1.7.0, Culture=neutral, PublicKeyToken=5913c2625c66b2fe, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\lpcieNet\1.1.7.0__5913c2625c66b2fe\lpcieNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RshCSharpWrapper">
+      <HintPath>C:\RshSDK\2_1\lib\RshCSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACS\ACS.cs" />
+    <Compile Include="ACS\Packet.cs" />
+    <Compile Include="ACS\RByteConverter.cs" />
+    <Compile Include="ACS\UACS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ACS\UACS.Designer.cs">
+      <DependentUpon>UACS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UMinThick.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UMinThick.designer.cs">
+      <DependentUpon>UMinThick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USelectResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USelectResult.Designer.cs">
+      <DependentUpon>USelectResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UStatist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UStatist.Designer.cs">
+      <DependentUpon>UStatist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UStatist2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UStatist2.Designer.cs">
+      <DependentUpon>UStatist2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USumM1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USumM1.Designer.cs">
+      <DependentUpon>USumM1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\CursorBorder.cs" />
+    <Compile Include="Def\FSensorsColCalibr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def\FSensorsColCalibr.designer.cs">
+      <DependentUpon>FSensorsColCalibr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\USensorsColCalibr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Def\USensorsColCalibr.designer.cs">
+      <DependentUpon>USensorsColCalibr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPrevTube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrevTube.Designer.cs">
+      <DependentUpon>FPrevTube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GSPF052PCI\GSPF.cs" />
+    <Compile Include="GSPF052PCI\IGSPF052.cs" />
+    <Compile Include="SG\JWorkSG.cs" />
+    <Compile Include="SG\SGSet.cs" />
+    <Compile Include="SG\uGSPF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SG\uGSPF.Designer.cs">
+      <DependentUpon>uGSPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\BaseItem.cs" />
+    <Compile Include="SG\ColorPicker\ColorCell.cs" />
+    <Compile Include="SG\ColorPicker\ColorColumn.cs" />
+    <Compile Include="SG\ColorPicker\ColorEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SG\DGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SG\DGV.Designer.cs">
+      <DependentUpon>DGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\Etalon.cs" />
+    <Compile Include="SG\EtalonPars.cs" />
+    <Compile Include="SG\FMainSG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SG\FMainSG.Designer.cs">
+      <DependentUpon>FMainSG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\FMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SG\FMessage.Designer.cs">
+      <DependentUpon>FMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\FTubeGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SG\FTubeGraph.designer.cs">
+      <DependentUpon>FTubeGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\FTubeHalfPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SG\FTubeHalfPeriod.Designer.cs">
+      <DependentUpon>FTubeHalfPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\GraphObject.cs" />
+    <Compile Include="SG\Group.cs" />
+    <Compile Include="SG\IBaseItem.cs" />
+    <Compile Include="SG\IDGV.cs" />
+    <Compile Include="SG\IU.cs" />
+    <Compile Include="SG\JWorkSGSOP.cs" />
+    <Compile Include="SG\MouseWheelHandler.cs" />
+    <Compile Include="SG\MSPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SG\SGHalfPeriod.cs" />
+    <Compile Include="SG\SGPoint.cs" />
+    <Compile Include="SG\SGWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SG\SGWork.Designer.cs">
+      <DependentUpon>SGWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\Tresh.cs" />
+    <Compile Include="SG\Tube.cs" />
+    <Compile Include="SG\TubePars.cs" />
+    <Compile Include="SG\TypeSize.cs" />
+    <Compile Include="SG\UCGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SG\UCGraph.Designer.cs">
+      <DependentUpon>UCGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\UCTrack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SG\UCTrack.Designer.cs">
+      <DependentUpon>UCTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SG\USG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SG\USG.Designer.cs">
+      <DependentUpon>USG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UBorders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UBorders.Designer.cs">
+      <DependentUpon>UBorders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USumM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USumM.Designer.cs">
+      <DependentUpon>USumM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\BorderLine.cs" />
+    <Compile Include="Def\UCalibr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Def\UCalibr.Designer.cs">
+      <DependentUpon>UCalibr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LCard\ILCard502.cs" />
+    <Compile Include="LCard\L502virtual.cs" />
+    <Compile Include="LCard\LCard502.cs" />
+    <Compile Include="LCard\LCard502E.cs" />
+    <Compile Include="UThick.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UThick.designer.cs">
+      <DependentUpon>UThick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Work\JBankResult.cs" />
+    <Compile Include="Work\JTransportAss.cs" />
+    <Compile Include="Work\FTune.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Work\FTune.designer.cs">
+      <DependentUpon>FTune.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Work\JCollect.cs" />
+    <Compile Include="Work\JResult.cs" />
+    <Compile Include="Work\JTest.cs" />
+    <Compile Include="Work\JThick.cs" />
+    <Compile Include="Work\JTransport.cs" />
+    <Compile Include="Work\JTransportStrobe.cs" />
+    <Compile Include="Work\JTransportTest.cs" />
+    <Compile Include="Work\JWork.cs" />
+    <Compile Include="Work\SignalListDef.cs" />
+    <Compile Include="Work\UWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Work\UWork.designer.cs">
+      <DependentUpon>UWork.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ACS\UACS.resx">
+      <DependentUpon>UACS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UMinThick.resx">
+      <DependentUpon>UMinThick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USelectResult.resx">
+      <DependentUpon>USelectResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UStatist.resx">
+      <DependentUpon>UStatist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UStatist2.resx">
+      <DependentUpon>UStatist2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USumM1.resx">
+      <DependentUpon>USumM1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\FSensorsColCalibr.resx">
+      <DependentUpon>FSensorsColCalibr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\USensorsColCalibr.resx">
+      <DependentUpon>USensorsColCalibr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrevTube.resx">
+      <DependentUpon>FPrevTube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\uGSPF.resx">
+      <DependentUpon>uGSPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\DGV.resx">
+      <DependentUpon>DGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\FMainSG.resx">
+      <DependentUpon>FMainSG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\FMessage.resx">
+      <DependentUpon>FMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\FTubeGraph.resx">
+      <DependentUpon>FTubeGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\FTubeHalfPeriod.resx">
+      <DependentUpon>FTubeHalfPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\SGWork.resx">
+      <DependentUpon>SGWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\UCGraph.resx">
+      <DependentUpon>UCGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\UCTrack.resx">
+      <DependentUpon>UCTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SG\USG.resx">
+      <DependentUpon>USG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UBorders.resx">
+      <DependentUpon>UBorders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USumM.resx">
+      <DependentUpon>USumM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\UCalibr.resx">
+      <DependentUpon>UCalibr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UThick.resx">
+      <DependentUpon>UThick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Work\FTune.resx">
+      <DependentUpon>FTune.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Work\UWork.resx">
+      <DependentUpon>UWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Def\FBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def\FBase.Designer.cs">
+      <DependentUpon>FBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\FData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def\FData.Designer.cs">
+      <DependentUpon>FData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\FMeases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def\FMeases.Designer.cs">
+      <DependentUpon>FMeases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\FSensors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def\FSensors.Designer.cs">
+      <DependentUpon>FSensors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Def\RCursor.cs" />
+    <Compile Include="Def\RUnit.cs" />
+    <Compile Include="UCrossLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCrossLine.Designer.cs">
+      <DependentUpon>UCrossLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UManage.designer.cs">
+      <DependentUpon>UManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\USensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Def\USensor.Designer.cs">
+      <DependentUpon>USensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def\USensorData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Def\USensorData.Designer.cs">
+      <DependentUpon>USensorData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USum.Designer.cs">
+      <DependentUpon>USum.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Def\FBase.resx">
+      <DependentUpon>FBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\FData.resx">
+      <DependentUpon>FData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\FMeases.resx">
+      <DependentUpon>FMeases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\FSensors.resx">
+      <DependentUpon>FSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UCrossLine.resx">
+      <DependentUpon>UCrossLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UManage.resx">
+      <DependentUpon>UManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\USensor.resx">
+      <DependentUpon>USensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def\USensorData.resx">
+      <DependentUpon>USensorData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USum.resx">
+      <DependentUpon>USum.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\EtalonCheckResult.datasource" />
+    <None Include="Properties\DataSources\Viewer.SOP.SOPName.datasource" />
+    <None Include="Properties\DataSources\Viewer.SOP.SOPPoint.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\About\About.csproj">
+      <Project>{7092DC5D-8F88-4838-987F-6B92EF7389E1}</Project>
+      <Name>About</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CalclSGPars\CalclSGPars.csproj">
+      <Project>{C8129903-F6AB-4756-BA1F-E23E881205B7}</Project>
+      <Name>CalclSGPars</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Demagnetizer\Demagnetizer.csproj">
+      <Project>{C9F93380-2067-4F72-A137-F017DA71BC1C}</Project>
+      <Name>Demagnetizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Inverter\Inverter.csproj">
+      <Project>{7A45CDB6-27F5-4DF4-B638-5954A5115EE1}</Project>
+      <Name>Inverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PARLIB\PARLIB.csproj">
+      <Project>{E343BAF4-1DB4-486D-804D-D6C317D63CC5}</Project>
+      <Name>PARLIB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Protocol\Protocol.csproj">
+      <Project>{F7C68246-EAEA-4E9D-ABA0-5F09DAEA0084}</Project>
+      <Name>Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RAGLib\RAGLib.csproj">
+      <Project>{8B8DA553-731E-4BF3-B4E9-FC9C1700B930}</Project>
+      <Name>RAGLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RectifierMB\RectifierMB.csproj">
+      <Project>{96624F6A-94F6-4611-AB70-0467AAC38F5B}</Project>
+      <Name>RectifierMB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RS232\RS232.csproj">
+      <Project>{C71A249F-8E73-47E1-BCAB-16C31D3F1C7E}</Project>
+      <Name>RS232</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Share\Share.csproj">
+      <Project>{0F2FFD99-9E56-4CCD-A66F-CD173B329481}</Project>
+      <Name>Share</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Signals\Signals.csproj">
+      <Project>{6A8DA35B-F3DE-4A1B-A567-2508FB70414A}</Project>
+      <Name>Signals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SQL\SQL.csproj">
+      <Project>{B7767642-6348-4077-936C-E2EB4604D7AF}</Project>
+      <Name>SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UPAR_common\UPAR_common.csproj">
+      <Project>{7904368C-7A89-4044-B685-50A33F4CE606}</Project>
+      <Name>UPAR_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankLib\BankLib.csproj">
+      <Project>{46E5F7C4-B4CA-4D35-9740-004325C98EBD}</Project>
+      <Name>BankLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResultLib\ResultLib.csproj">
+      <Project>{D25B66C0-D7C1-440E-A967-06C1BDC0AD91}</Project>
+      <Name>ResultLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPAR\UPAR.csproj">
+      <Project>{B26ABE6B-83F8-4BFD-AE40-F053FD2096F9}</Project>
+      <Name>UPAR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="L4.ico" />
+    <None Include="SG\SGPoint.bmp" />
+    <None Include="SG\app.config" />
+    <None Include="SG\Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
